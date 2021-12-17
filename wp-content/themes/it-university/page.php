@@ -1,5 +1,7 @@
 <?php
 
+//domyślny nagłówek
+get_header();
 //Wczytanie blog postow i ich opublikowanie na stronie
 
   while(have_posts()){
@@ -9,4 +11,6 @@
     <?php
   }
 
+  //domyślna stopka
+  get_footer(); 
 ?>
