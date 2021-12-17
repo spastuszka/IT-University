@@ -1,6 +1,9 @@
 <?php
 
-//Wczytanie blog postow i ich opublikowanie na stronie
+//default header
+get_header();
+
+//Upload blog posts and publish them on the site
 
   while(have_posts()){
     the_post(); ?>
@@ -8,5 +11,7 @@
       <p><?php the_content(); ?></p>
     <?php
   }
+
+  //default footer
 
 ?>
