@@ -1,1 +1,3 @@
-<h3>This is universal footer</h3>
+  <?php wp_footer(); ?>
+  </body>
+</html>
