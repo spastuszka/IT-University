@@ -5,5 +5,3 @@
 </head>
 <body>
   <h1>IT University</h1>
-</body>
-</html>
