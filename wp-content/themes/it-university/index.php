@@ -1,12 +1,12 @@
 <?php
 
-  function greet($name, $color){
-    echo "<p>Hi my name is $name, my favourite color is: $color</p>";
+//Wczytanie blog postow i ich opublikowanie na stronie
+
+  while(have_posts()){
+    the_post(); ?>
+      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+      <p><?php the_content(); ?></p>
+    <?php
   }
 
-  greet('Sebastian', 'green');
-  greet('Klaudia','blue');
-
 ?>
-
-<h1><?php bloginfo('name'); ?></h1>
