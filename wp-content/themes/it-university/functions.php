@@ -11,3 +11,10 @@ function it_university_files(){
 
 //calling an action about loaded script
 add_action( 'wp_enqueue_scripts', 'it_university_files' );
+
+
+function it_university_title(){
+  add_theme_support('title-tag');
+}
+
+add_action('after_setup_theme','it_university_title');
