@@ -21,13 +21,13 @@
         </p>
       </div>
 
-      <div class="page-links">
+      <!-- <div class="page-links">
         <h2 class="page-links__title"><a href="#">About Us</a></h2>
         <ul class="min-list">
           <li class="current_page_item"><a href="#">Our History</a></li>
           <li><a href="#">Our Goals</a></li>
         </ul>
-      </div>
+      </div> -->
 
       <div class="generic-content">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptates vero vel temporibus aliquid possimus, facere accusamus modi. Fugit saepe et autem, laboriosam earum reprehenderit illum odit nobis, consectetur dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos molestiae, tempora alias atque vero officiis sit commodi ipsa vitae impedit odio repellendus doloremque quibusdam quo, ea veniam, ad quod sed.</p>
