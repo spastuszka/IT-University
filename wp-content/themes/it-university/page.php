@@ -9,7 +9,7 @@
       <div class="page-banner__content container container--narrow">
         <h1 class="page-banner__title"><?php the_title(); ?></h1>
         <div class="page-banner__intro">
-          <p>Learn how the school of your dreams got started.</p>
+          <p>TODO: Don't Forget to replace this text by custom post type</p>
         </div>
       </div>
     </div>
