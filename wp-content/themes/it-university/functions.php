@@ -14,6 +14,7 @@ add_action( 'wp_enqueue_scripts', 'it_university_files' );
 
 
 function it_university_title(){
+  register_nav_menu('headerMenuLocation','Header Menu Location');
   add_theme_support('title-tag');
 }
 
