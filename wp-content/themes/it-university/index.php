@@ -21,7 +21,8 @@
             <p>Posted by: <?php  ?> on <?php ?> in <?php ?></p>
           </div>
           <div class="generic-content">
-            <p><?php the_excerpt(); ?></p>
+            <?php the_excerpt(); ?>
+            <p><a class="btn btn--blue" href="<?php the_permalink(); ?>">Continue reading &raquo;</a></p>
           </div>
         </div>
 
