@@ -11,7 +11,7 @@
           echo "date will go here";
         }  */?></h1>
         <div class="page-banner__intro">
-          <p>TODO: Don't Forget to replace this text by custom post type</p>
+          <p><?php the_archive_description(); ?></p>
         </div>
       </div>
   </div>
