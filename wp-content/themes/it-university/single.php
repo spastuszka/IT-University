@@ -13,5 +13,5 @@ get_header();
   }
 
   //default footer
-
+  get_footer();
 ?>
