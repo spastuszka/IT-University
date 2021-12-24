@@ -9,6 +9,7 @@ function university_post_types(){
         'singular_name' => __('Event'),
         'add_new_item' => __('Add New Event'),
         'edit_item' => __('Edit Event'),
+        'all_item' => __('All Events'),
       ),
       'menu_icon' => 'dashicons-calendar',
     ));
