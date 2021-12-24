@@ -30,6 +30,7 @@ function university_post_types(){
         'name' => __('Events'),
         'singular_name' => __('Event')
       ),
+      'menu_icon' => 'dashicons-calendar',
     ));
 }
 
