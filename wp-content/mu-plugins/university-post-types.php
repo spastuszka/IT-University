@@ -4,6 +4,7 @@ function university_post_types(){
   register_post_type('event',
     array(
       'public' => true,
+      'show_in_rest' => true,
       'labels' => array(
         'name' => __('Events'),
         'singular_name' => __('Event'),
