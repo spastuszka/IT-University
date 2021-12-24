@@ -25,7 +25,11 @@ add_action('after_setup_theme','it_university_title');
 function university_post_types(){
   register_post_type('event',
     array(
-      'public' => true
+      'public' => true,
+      'labels' => array(
+        'name' => __('Events'),
+        'singular_name' => __('Event')
+      ),
     ));
 }
 
