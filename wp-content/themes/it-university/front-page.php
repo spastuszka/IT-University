@@ -20,7 +20,7 @@
               'posts_per_page' => -1,
               'post_type' => 'event',
               'orderby' => 'title',
-              'order' => 'DESC',
+              'order' => 'ASC',
             ));
 
             while($homepageEvents -> have_posts()){
