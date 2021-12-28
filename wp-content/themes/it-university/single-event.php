@@ -30,13 +30,17 @@ get_header();
       <?php
         $relatedPrograms = get_field('related_programs');
 
-        echo '<h2>Related Program(s)</h2>';
-        echo '<ul class="link-list min-list">';
-        foreach($relatedPrograms as $program){ ?>
-          <li><a href="<?php echo get_the_permalink($program); ?>"><?php echo get_the_title($program); ?></a></li>
-        <?php
+        if($relatedPrograms){
+          echo '<hr class="section-break">';
+          echo '<h3 class="headline headline--medium">Related Program(s)</h3>';
+          echo '<ul class="link-list min-list">';
+          foreach($relatedPrograms as $program){ ?>
+            <li><a href="<?php echo get_the_permalink($program); ?>"><?php echo get_the_title($program); ?></a></li>
+          <?php
+          }
+          echo '</ul>';
         }
-        echo '</ul>';
+
       ?>
     </div>
     <?php
