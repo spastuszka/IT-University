@@ -4,7 +4,7 @@
       <div class="page-banner__content container container--narrow">
         <h1 class="page-banner__title">All Programs</h1>
         <div class="page-banner__intro">
-          <p>See what is going on in our world.</p>
+          <p>There is something for everyone.</p>
         </div>
       </div>
   </div>
