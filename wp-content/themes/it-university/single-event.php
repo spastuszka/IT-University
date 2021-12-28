@@ -26,6 +26,14 @@ get_header();
       <div class="generic-content">
         <?php the_content(); ?>
       </div>
+
+      <?php
+        $relatedPrograms = get_field('related_programs');
+
+        foreach($relatedPrograms as $program){
+          echo get_the_title($program);
+        }
+      ?>
     </div>
     <?php
   }//default footer
