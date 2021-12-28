@@ -22,6 +22,14 @@
               'meta_key' => 'event_date',
               'orderby' => 'meta_value_num',
               'order' => 'ASC',
+              'meta_query' => array(
+                array(
+                  'key'=> 'event_date',
+                  'compare' => '>=',
+                  'value' => $today,
+                  'type' => 'numeric',
+                ),
+              ),
             ));
 
             while($homepageEvents -> have_posts()){
