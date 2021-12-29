@@ -40,6 +40,26 @@ function university_post_types(){
       ),
       'menu_icon' => 'dashicons-awards',
     ));
+
+    //Professor Post Type
+  register_post_type('professor',
+  array(
+    'supports' => array('title', 'editor'),
+    'rewrite' => array(
+      'slug' => 'professors',
+    ),
+    'public' => true,
+    'has_archive' => true,
+    'show_in_rest' => true,
+    'labels' => array(
+      'name' => __('Professors'),
+      'singular_name' => __('Professor'),
+      'add_new_item' => __('Add New Professor'),
+      'edit_item' => __('Edit Professor'),
+      'all_items' => __('All Professors'),
+    ),
+    'menu_icon' => 'dashicons-welcome-learn-more',
+  ));
 }
 
 add_action('init', 'university_post_types');
