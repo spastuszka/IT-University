@@ -42,8 +42,15 @@ get_header();
               'value' => $today,
               'type' => 'numeric',
             ),
+            array(
+              'key'=> 'related_programs',
+              'compare' => 'LIKE',
+              'value' => '"'.get_the_ID().'"',
+            )
           ),
         ));
+
+        echo '<h3 class="headline headline--medium">Upcoming '.get_the_title().' Events</h3>';
 
         while($homepageEvents -> have_posts()){
           $homepageEvents -> the_post();?>
