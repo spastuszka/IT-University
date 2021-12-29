@@ -50,9 +50,10 @@ get_header();
           ),
         ));
 
-        echo '<h3 class="headline headline--medium">Upcoming '.get_the_title().' Events</h3>';
-
-        while($homepageEvents -> have_posts()){
+        if($homepageEvents-> have_posts()){
+          echo '<hr class="section-break">';
+          echo '<h3 class="headline headline--medium">Upcoming '.get_the_title().' Events</h3>';
+          while($homepageEvents -> have_posts()){
           $homepageEvents -> the_post();?>
           <div class="event-summary">
             <a class="event-summary__date t-center" href="<?php the_permalink(); ?>">
@@ -75,6 +76,7 @@ get_header();
             </div>
           </div>              
           <?php } 
+        }
           wp_reset_postdata();
           ?>
     </div>
