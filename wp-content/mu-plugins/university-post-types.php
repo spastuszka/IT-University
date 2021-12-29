@@ -49,7 +49,6 @@ function university_post_types(){
       'slug' => 'professors',
     ),
     'public' => true,
-    'has_archive' => true,
     'show_in_rest' => true,
     'labels' => array(
       'name' => __('Professors'),
