@@ -13,7 +13,7 @@ function it_university_files(){
 add_action( 'wp_enqueue_scripts', 'it_university_files' );
 
 
-function it_university_features(){
+function it_university_title(){
   register_nav_menu('headerMenuLocation','Header Menu Location');
   register_nav_menu('footerLocationOne','Footer Location One');
   register_nav_menu('footerLocationTwo','Footer Location Two');
@@ -22,7 +22,7 @@ function it_university_features(){
 
 }
 
-add_action('after_setup_theme','it_university_feature');
+add_action('after_setup_theme','it_university_title');
 
 
 function it_university_adjust_queries($query){
