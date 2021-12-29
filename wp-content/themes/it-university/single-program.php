@@ -51,6 +51,7 @@ get_header();
             <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>       
           <?php } 
         }
+        wp_reset_postdata();
 
         $today = date('Ymd');
         $homepageEvents = new WP_Query(array(
