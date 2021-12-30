@@ -20,7 +20,7 @@ get_header();
     <div class="container container--narrow page-section">
 
       <div class="generic-content">
-        <?php the_content(); ?>
+        <?php the_post_thumbnail(); the_content(); ?>
       </div>
 
       <?php
