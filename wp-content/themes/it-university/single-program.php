@@ -47,10 +47,10 @@ get_header();
           echo '<hr class="section-break">';
           echo '<h3 class="headline headline--medium">'.get_the_title().' Professors</h3>';
 
-          echo '<ul class="professor-card">';
+          echo '<ul class="professors-card">';
           while($relatedProfessors -> have_posts()){
           $relatedProfessors -> the_post();?>
-            <li class="professor-professor-card__list-item">
+            <li class="professor-card__list-item">
               <a class="professor-card" href="<?php echo get_the_permalink($program); ?>">
                 <img class="professor-card__image" src="<?php the_post_thumbnail_url(); ?>">
                 <span class="professor-card__name"><?php the_title(); ?></span>
