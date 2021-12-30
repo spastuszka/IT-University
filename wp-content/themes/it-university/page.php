@@ -4,7 +4,10 @@
   while(have_posts()){
     the_post();
     
-    pageBanner();
+    pageBanner(array(
+      // 'title' => 'There is a title',
+      'subtitle' => 'This is a subtitle',
+    ));
 
     ?>
     
