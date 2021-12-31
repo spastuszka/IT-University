@@ -5,8 +5,9 @@
     the_post();
     
     pageBanner(array(
-      // 'title' => 'There is a title',
-      'subtitle' => 'This is a subtitle',
+      'title' => 'There is a title',
+      'subtitle' => 'Some subtitle',
+      'photo' => 'https://images.unsplash.com/photo-1640919570975-420db180f038?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
     ));
 
     ?>
