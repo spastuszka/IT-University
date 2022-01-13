@@ -84,3 +84,10 @@ function it_university_adjust_queries($query){
 }
 
 add_action('pre_get_posts','it_university_adjust_queries');
+
+function it_map_api_key($api){
+  $api['key'] = 'AIzaSyDw3ErzxadnyAAXPx-udAZTD_rylZYdPfY';
+  return $api;
+}
+
+add_filter('acf/fields/google_map/api', 'it_map_api_key');
