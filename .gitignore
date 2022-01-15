@@ -7,16 +7,58 @@
 #
 # Note: if you want to stage/commit WP core files
 # you can delete this whole section/until Configuration.
-/wp-admin/
+/wp-content/themes/it-university/node_modules
+wp-admin/
 /wp-content/index.php
 /wp-content/languages
 /wp-content/plugins/index.php
 /wp-content/themes/index.php
-/wp-includes/
+wp-includes/*
 /index.php
 /license.txt
 /readme.html
 /xmlrpc.php
+
+########################
+# Wordpress Core files #
+########################
+wp-admin/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/languages/
+wp-content/index.php
+wp-content/themes/index.php
+wp-includes/
+index.php
+license.txt
+readme.html
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+
+#####################################
+# Wordpress untracked plugins files #
+#####################################
+wp-content/plugins/index.php
+wp-content/plugins/akismet/
+wp-content/plugins/debug-bar/
+
+######################################
+# Wordpress specific untracked files #
+######################################
+wp-config-local.php
+wp-content/uploads/
+wp-content/upgrade/
 
 # Configuration
 wp-config.php
