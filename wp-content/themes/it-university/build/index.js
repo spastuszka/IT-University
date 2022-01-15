@@ -3993,6 +3993,7 @@ class Search {
     this.closeButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.search-overlay__close');
     this.searchOverlay = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.search-overlay');
     this.events();
+    this.isOverlayOpen = false;
   }
   /* 2. Events */
 
@@ -4000,18 +4001,31 @@ class Search {
   events() {
     this.openButton.on("click", this.openOverlay.bind(this));
     this.closeButton.on("click", this.closeOverlay.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("keydown", this.keyPressDispatcher.bind(this));
   }
   /* 3. Methods (function, action...) */
 
 
+  keyPressDispatcher(e) {
+    if (e.keyCode == 83 && !this.isOverlayOpen) {
+      this.openOverlay();
+    }
+
+    if (e.keyCode == 27 && this.isOverlayOpen) {
+      this.closeOverlay();
+    }
+  }
+
   openOverlay() {
     this.searchOverlay.addClass('search-overlay--active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").addClass("body-no-scroll");
+    this.isOverlayOpen = true;
   }
 
   closeOverlay() {
     this.searchOverlay.removeClass('search-overlay--active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").removeClass("body-no-scroll");
+    this.isOverlayOpen = false;
   }
 
 }
