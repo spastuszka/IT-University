@@ -3901,7 +3901,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
 const heroSlider = new _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_2__["default"]();
-const magicalSearch = new _modules_Search__WEBPACK_IMPORTED_MODULE_3__["default"]();
+const search = new _modules_Search__WEBPACK_IMPORTED_MODULE_3__["default"]();
 
 /***/ }),
 
@@ -3983,8 +3983,7 @@ class MobileMenu {
 
 __webpack_require__.r(__webpack_exports__);
 class Search {
-  constructor() {
-    alert('I am a search.');
+  constructor() {// alert('I am a search.');
   }
 
 }
