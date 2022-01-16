@@ -85,4 +85,5 @@ wp-content/themes/it-university/build/*
 wp-content/themes/it-university/src/*
 wp-content/themes/it-university/build/index.asset.php
 wp-content/themes/it-university/build/index.js
+/wp-content/themes/
 # End of https://www.toptal.com/developers/gitignore/api/wordpress
