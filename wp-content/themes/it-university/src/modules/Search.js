@@ -44,8 +44,9 @@ class Search {
   }
 
   getResults() {
-    this.resultsDiv.html("Imagine real search results here...")
-    this.isSpinnerVisible = false
+    $.getJSON('http://it-university.local/wp-json/wp/v2/posts?search=test', function(posts){
+      alert(posts[0].title.rendered); //tu zaglądamy do JSON-a zagnieżdżenia
+    });
   }
 
   keyPressDispatcher(e) {
