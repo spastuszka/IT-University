@@ -4031,7 +4031,7 @@ class Search {
   }
 
   getResults() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON('http://it-university.local/wp-json/wp/v2/posts?search=test', function (posts) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON('http://it-university.local/wp-json/wp/v2/posts?search=' + this.searchField.val(), function (posts) {
       alert(posts[0].title.rendered); //tu zaglądamy do JSON-a zagnieżdżenia
     });
   }

@@ -44,7 +44,7 @@ class Search {
   }
 
   getResults() {
-    $.getJSON('http://it-university.local/wp-json/wp/v2/posts?search=test', function(posts){
+    $.getJSON('http://it-university.local/wp-json/wp/v2/posts?search=' + this.searchField.val(), function(posts){
       alert(posts[0].title.rendered); //tu zaglądamy do JSON-a zagnieżdżenia
     });
   }
