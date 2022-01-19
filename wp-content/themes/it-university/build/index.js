@@ -4031,13 +4031,14 @@ class Search {
   }
 
   getResults() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON('http://it-university.local/wp-json/wp/v2/posts?search=' + this.searchField.val(), posts => {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON('/wp-json/wp/v2/posts?search=' + this.searchField.val(), posts => {
       this.resultsDiv.html(`
       <h2 class="section-search-overlay__section-title">General Information</h2>
       ${posts.length ? '<ul class="link-list min-list">' : 'No general information matches that search'}
         ${posts.map(item => `<li><a href="${item.link}">${item.title.rendered}</a></li>`).join('')}
       ${posts.length ? '</ul>' : ''}
       `);
+      this.isSpinnerVisible = false;
     });
   }
 
