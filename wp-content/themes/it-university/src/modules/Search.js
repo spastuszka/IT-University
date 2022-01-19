@@ -47,9 +47,10 @@ class Search {
     $.getJSON('http://it-university.local/wp-json/wp/v2/posts?search=' + this.searchField.val(), posts => {
       this.resultsDiv.html(`
       <h2 class="section-search-overlay__section-title">General Information</h2>
-      <ul class="link-list min-list">
+      ${posts.length ? '<ul class="link-list min-list">' : 'No general information matches that search'}
         ${posts.map(item => `<li><a href="${item.link}">${item.title.rendered}</a></li>`).join('')}
-      </ul>`);
+      ${posts.length ? '</ul>': ''}
+      `);
     });
   }
 
