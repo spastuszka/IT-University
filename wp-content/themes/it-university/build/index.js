@@ -4042,6 +4042,8 @@ class Search {
       ${combinedResults.length ? '</ul>' : ''}
       `);
       this.isSpinnerVisible = false;
+    }, () => {
+      this.resultsDiv.html('<p>Unexpected error. Please try again.</p>');
     });
     /* Synchroniczny */
     // $.getJSON(universityData.root_url + '/wp-json/wp/v2/posts?search=' + this.searchField.val(), posts => {
