@@ -7,6 +7,8 @@
 #
 # Note: if you want to stage/commit WP core files
 # you can delete this whole section/until Configuration.
+
+
 /wp-content/themes/it-university/node_modules
 wp-admin/
 /wp-content/index.php
@@ -79,5 +81,9 @@ wp-config.php
 # uncomment the next line
 #/wp-content/themes
 
-
+wp-content/themes/it-university/build/*
+wp-content/themes/it-university/src/*
+wp-content/themes/it-university/build/index.asset.php
+wp-content/themes/it-university/build/index.js
+/wp-content/themes/
 # End of https://www.toptal.com/developers/gitignore/api/wordpress
