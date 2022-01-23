@@ -1,6 +1,6 @@
 <?php
 
-require get_theme_file_uri('/inc/search-route.php');
+require get_theme_file_path('/includes/search-route.php');
 
 function it_university_custom_rest(){
   register_rest_field('post', 'authorName', array(
