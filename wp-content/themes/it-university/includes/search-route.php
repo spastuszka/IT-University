@@ -10,7 +10,7 @@ function universityRegisterSearch(){
 function universitySearchResults($data){
   $professors = new WP_Query(array(
     'post_type' => 'professor',
-
+    's' => $data['term'],
   ));
 
   $professorResults = array();
@@ -20,7 +20,6 @@ function universitySearchResults($data){
     array_push($professorResults, array(
       'title' => get_the_title(),
       'permalink' => get_the_permalink(),
-      's' => $data['term'],
     ));
   }
 
