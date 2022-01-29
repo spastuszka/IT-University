@@ -78,15 +78,26 @@ function universitySearchResults($data){
     }
   }
 
+  $programsMetaQuery =  array(
+    'relation' => 'OR',
+  );
+
+  //utworzenie wyszukiwania nieskończonej liczby tablic - start
+  foreach($results['programs'] as $item){
+    array_push($programsMetaQuery,
+    array(
+      'key' => 'related_programs',
+      'compare' => 'LIKE',
+      'value' => '"' . $item['id'] . '"',
+    ));
+  }
+
   $programRelationshipQuery = new WP_Query(array(
     'post_type' => 'professor',
-    'meta_query' => array(
-      array(
-        'key' => 'related_programs',
-        'compare' => 'LIKE',
-        'value' => '"' . $results['programs'][0]['id'] . '"',
-    )), 
+    'meta_query' => $programsMetaQuery,
   ));
+
+  //utworzenie wyszukiwania nieskończonej liczby tablic - koniec
 
   while($programRelationshipQuery -> have_posts()){
     $programRelationshipQuery->the_post();
