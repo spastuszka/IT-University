@@ -6212,7 +6212,7 @@ class Search {
   }
 
   addSearchHTML() {
-    document.body.classList.insertAdjacentHTML('beforeend', `
+    document.body.insertAdjacentHTML('beforeend', `
       <div class="search-overlay ">
         <div class="search-overlay__top">
           <div class="container">

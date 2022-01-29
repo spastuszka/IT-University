@@ -170,7 +170,7 @@ async getResults() {
   }
 
   addSearchHTML(){
-    document.body.classList.insertAdjacentHTML(
+    document.body.insertAdjacentHTML(
       'beforeend',
       `
       <div class="search-overlay ">
