@@ -7,6 +7,8 @@ function university_post_types()
   register_post_type(
     'campus',
     array(
+      'capability_type' => 'campus',
+      'map_meta_cap' => true,
       'supports' => array('title', 'editor', 'excerpt'),
       'rewrite' => array(
         'slug' => 'campuses',
