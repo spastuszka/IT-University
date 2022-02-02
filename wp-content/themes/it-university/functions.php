@@ -158,3 +158,10 @@ function ourLoginCSS()
 }
 
 add_action('login_enqueue_scripts', 'ourLoginCSS');
+
+function ourLoginTitle()
+{
+  return get_bloginfo('name');
+}
+
+add_filter('login_headertitle', 'ourLoginTitle');
