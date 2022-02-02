@@ -136,3 +136,12 @@ function noSubsAdminBar()
   }
 }
 add_action('wp_loaded', 'noSubsAdminBar');
+
+
+//Customize Login Screen
+function outHeaderUrl()
+{
+  return esc_url(site_url('/'));
+}
+
+add_filter('login_headerurl', 'outHeaderUrl');
