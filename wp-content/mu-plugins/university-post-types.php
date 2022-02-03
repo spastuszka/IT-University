@@ -1,10 +1,14 @@
 <?php
 
-function university_post_types(){
+function university_post_types()
+{
 
   //Campus Post Type
-  register_post_type('campus',
+  register_post_type(
+    'campus',
     array(
+      'capability_type' => 'campus',
+      'map_meta_cap' => true,
       'supports' => array('title', 'editor', 'excerpt'),
       'rewrite' => array(
         'slug' => 'campuses',
@@ -20,11 +24,15 @@ function university_post_types(){
         'all_items' => __('All Campuses'),
       ),
       'menu_icon' => 'dashicons-location-alt',
-    ));
+    )
+  );
 
   //Event Post Type
-  register_post_type('event',
+  register_post_type(
+    'event',
     array(
+      'capability_type' => 'event',
+      'map_meta_cap' => true,
       'supports' => array('title', 'editor', 'excerpt'),
       'rewrite' => array(
         'slug' => 'events',
@@ -40,10 +48,12 @@ function university_post_types(){
         'all_items' => __('All Events'),
       ),
       'menu_icon' => 'dashicons-calendar',
-    ));
-  
+    )
+  );
+
   //Program Post Type
-  register_post_type('program',
+  register_post_type(
+    'program',
     array(
       'supports' => array('title'),
       'rewrite' => array(
@@ -60,23 +70,26 @@ function university_post_types(){
         'all_items' => __('All Programs'),
       ),
       'menu_icon' => 'dashicons-awards',
-    ));
+    )
+  );
 
-    //Professor Post Type
-  register_post_type('professor',
-  array(
-    'supports' => array('title', 'editor','thumbnail'),
-    'public' => true,
-    'show_in_rest' => true,
-    'labels' => array(
-      'name' => __('Professors'),
-      'singular_name' => __('Professor'),
-      'add_new_item' => __('Add New Professor'),
-      'edit_item' => __('Edit Professor'),
-      'all_items' => __('All Professors'),
-    ),
-    'menu_icon' => 'dashicons-welcome-learn-more',
-  ));
+  //Professor Post Type
+  register_post_type(
+    'professor',
+    array(
+      'supports' => array('title', 'editor', 'thumbnail'),
+      'public' => true,
+      'show_in_rest' => true,
+      'labels' => array(
+        'name' => __('Professors'),
+        'singular_name' => __('Professor'),
+        'add_new_item' => __('Add New Professor'),
+        'edit_item' => __('Edit Professor'),
+        'all_items' => __('All Professors'),
+      ),
+      'menu_icon' => 'dashicons-welcome-learn-more',
+    )
+  );
 }
 
 add_action('init', 'university_post_types');
