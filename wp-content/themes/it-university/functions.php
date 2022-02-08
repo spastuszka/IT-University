@@ -9,6 +9,12 @@ function it_university_custom_rest()
       return get_the_author();
     },
   ));
+
+  register_rest_field('note', 'userNoteCount', array(
+    'get_callback' => function () {
+      return count_user_posts(get_current_user_id(), 'note');
+    },
+  ));
 }
 
 add_action('rest_api_init', 'it_university_custom_rest');
@@ -176,7 +182,7 @@ function makeNotePrivate($data, $postarr)
 {
   if ($data['post_type'] == 'note') {
 
-    if (count_user_posts(get_current_user_id(), 'note') > 5 and !$postarr['id']) {
+    if (count_user_posts(get_current_user_id(), 'note') > 5 and !$postarr['ID']) {
       die('Youe have reached your note limit.');
     }
 
