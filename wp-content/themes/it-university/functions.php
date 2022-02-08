@@ -170,11 +170,13 @@ add_filter('login_headertitle', 'ourLoginTitle');
 
 //Force note posts to be private
 
+add_filter('wp_insert_post_data', 'makeNotePrivate', 10, 2);
+
 function makeNotePrivate($data, $postarr)
 {
   if ($data['post_type'] == 'note') {
 
-    if (count_user_posts(get_current_user_id(), 'note') > 5 and $postarr['id']) {
+    if (count_user_posts(get_current_user_id(), 'note') > 5 and !$postarr['id']) {
       die('Youe have reached your note limit.');
     }
 
@@ -187,7 +189,3 @@ function makeNotePrivate($data, $postarr)
 
   return $data;
 }
-
-//Tutaj ustawione jest więcej parametrów po przeciku ponieważ dodatkowo ustawiony jest priorytet danej funkcji - 10
-//oraz ile paramaterów ma dana funkcja brać pod uwagę
-add_filter('wp_insert_post_data', 'makeNotePrivate', 10, 2);
