@@ -2,18 +2,16 @@
 
 function univerisityLikeRoute()
 {
-  register_rest_route('univerisity/v1', 'manageLike', array(
+  register_rest_route('university/v1', 'manageLike', array(
     'methods' => 'POST',
     'callback' => 'createLike',
   ));
 
-  register_rest_route('univerisity/v1', 'manageLike', array(
+  register_rest_route('university/v1', 'manageLike', array(
     'methods' => 'DELETE',
     'callback' => 'deleteLike',
   ));
 }
-
-add_action('rest_api_init', 'univerisityLikeRoute');
 
 function createLike()
 {
@@ -24,3 +22,5 @@ function deleteLike()
 {
   return 'delete like';
 }
+
+add_action('rest_api_init', 'univerisityLikeRoute');
