@@ -13,14 +13,15 @@ function univerisityLikeRoute()
   ));
 }
 
-function createLike()
+function createLike($data)
 {
+  $professor = sanitize_text_field($data['professordId']);
   wp_insert_post(array(
     'post_type' => 'like',
     'post_status' => 'publish',
     'post_title' => '2ns PHP test',
     'meta_input' => array(
-      'liked_professor_id' => 1234
+      'liked_professor_id' => $professor,
     ),
   ));
 }
